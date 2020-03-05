@@ -1,0 +1,70 @@
+
+int main()
+{
+    int parking_space;
+    int slot;
+    int fees1,fees2,fees3;
+    char plate_number[20];
+    int total_revenue_collected ;
+    int i,sum=0;
+     printf ("total space available in parking space :");
+     scanf ("%d",&parking_space);
+     
+     for(i=0;i<parking_space;i++)
+    {
+     printf ("select one of this : \n ");
+     printf ("1: parking for car\n");
+     printf ("2: parking for truck\n");
+     printf ("3: parking for bus \n");
+    scanf ("%d",&slot);
+    
+    
+    
+    switch(slot)
+    {
+    case 1:
+    printf ("you select a car and pay $1 per hour \n  ");
+    
+    printf ("licence plate number \n");
+    scanf("%s",&plate_number);
+    
+    printf ("hours to park \n");
+    scanf("%d",&fees1);
+    break;
+    
+    case 2:
+     printf ("you select a truck and pay $3 per hour \n  ");
+    
+    printf ("licence plate number \n");
+    scanf("%s",&plate_number);
+    
+    printf ("hours to park \n");
+    scanf("%d",&fees2);
+    break;
+    
+    
+    case 3:
+     printf ("you select a bus and pay $2 per hour \n ");
+    
+    printf ("licence plate number \n ");
+    scanf("%s",&plate_number);
+    
+    printf ("hours to park \n");
+    scanf("%d",&fees3);
+    break;
+    
+    default :
+         printf("invalid option selected\n" );
+         break;
+    }
+    }
+     printf("parking is full now\n ");
+     
+     sum= fees1*1+fees2*3+fees3*2;
+     
+     printf("total revenue collected for parking $%d",sum);
+    
+    
+     
+     return 0;
+}
