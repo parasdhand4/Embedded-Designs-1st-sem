@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main()
+{
+ int sum,dice_1,dice_2,dice1,dice2,i,z;
+ for(i=1;i<=5;i++)
+ {
+ dice_1 = rand()%6+1;
+ dice_2 = rand()%6+1;
+ sum=dice_1+dice_2;
+ printf("%d",sum);
+ if( sum==7 || sum==11)
+ {
+ printf(" \nyou win ");
+ }
+ else if ( sum==2 || sum==3 || sum==12)
+ {
+ printf ("\n you lose ");
+ }
+ while(sum==4||sum==5||sum==6||sum==8||sum==9||sum==10)
+ {
+ dice1 = rand()%6+1;
+ dice2 = rand()%6+1;
+ z=dice1+dice2;
+
+ if(z==sum)
+ {
+ printf("\n player making point and ***Won***");
+ break;
+ }
+ else if (z==7)
+ {
+ printf("\nyou lose *******TRY BETTER NEXT TIME**********");
+ }
+
+ }
+ }
+ return (0);
+ }
